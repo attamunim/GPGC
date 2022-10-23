@@ -19,8 +19,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image(
-            image: AssetImage('assets/images/GPGC2.gif'),
+          Container(
+            child: Image(
+              image: AssetImage('assets/images/GPGC2.gif'),
+            ),
           ),
           SizedBox(
             height: 150,
@@ -39,44 +41,47 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           SizedBox(
             height: 30,
           ),
-          Container(
-            height: 50,
-            width: 390,
-            decoration: BoxDecoration(
-              color: Color(0xff7289DA),
-              borderRadius: BorderRadius.circular(10),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Container(
+              height: 45,
+              width: 390,
+              decoration: BoxDecoration(
+                color: Color(0xff5865F2),
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: OutlinedButton(
+                  onPressed: (() {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => RegisterScreen()));
+                  }),
+                  child: Text(
+                    'Register',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  )),
             ),
-            child: OutlinedButton(
-                onPressed: (() {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => RegisterScreen()));
-                }),
-                child: Text(
-                  'Register',
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                )),
           ),
-          SizedBox(
-            height: 20,
-          ),
-          Container(
-            height: 50,
-            width: 390,
-            decoration: BoxDecoration(
-              color: Color(0xff747F8D),
-              borderRadius: BorderRadius.circular(10),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Container(
+              height: 45,
+              width: 390,
+              decoration: BoxDecoration(
+                color: Color(0xff6A7480),
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: OutlinedButton(
+                  onPressed: (() {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginScreen()));
+                  }),
+                  child: Text(
+                    'Login',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  )),
             ),
-            child: OutlinedButton(
-                onPressed: (() {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()));
-                }),
-                child: Text(
-                  'Login',
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                )),
           )
         ],
       ),

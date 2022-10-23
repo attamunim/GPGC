@@ -30,10 +30,14 @@ class _DmMainScreenState extends State<DmMainScreen> {
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    'Shoaib',
+                    'Shoaib ✔',
                     style: TextStyle(fontSize: 15, color: Colors.black),
                   )
                 ]),
+                const Text(
+                  '✔ Playing vs code',
+                  style: TextStyle(color: Colors.black54, fontSize: 12),
+                )
               ],
             ),
           ],

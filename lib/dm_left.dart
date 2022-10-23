@@ -1,11 +1,7 @@
 import 'package:gpgc/data.dart';
 import 'package:flutter/material.dart';
+import 'package:gpgc/dm_home.dart';
 import 'package:gpgc/home.dart';
-import 'package:gpgc/login_screen.dart';
-import 'package:gpgc/main_screen.dart';
-import 'package:gpgc/welcome.dart';
-import 'package:overlapping_panels/overlapping_panels.dart';
-import 'package:super_bottom_navigation_bar/super_bottom_navigation_bar.dart';
 
 class DmLeftScreen extends StatefulWidget {
   const DmLeftScreen({super.key});
@@ -42,19 +38,33 @@ class _DmLeftScreenState extends State<DmLeftScreen> {
                         bottom: BorderSide(color: Colors.black12),
                       ),
                     ),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomeScreen()));
-                      },
-                      child: CircleAvatar(
-                        backgroundColor: Colors.white,
-                        radius: 25,
-                        foregroundImage: AssetImage('assets/images/GPGC2.gif'),
-                      ),
-                    ),
+                    child: IconButton(
+                        highlightColor: Colors.blue,
+                        hoverColor: Colors.blue,
+                        focusColor: Colors.blue,
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DmHome()));
+                        },
+                        icon: Icon(
+                          Icons.messenger_rounded,
+                          color: Colors.grey,
+                        )),
+                    // child: GestureDetector(
+                    //   onTap: () {
+                    //     Navigator.push(
+                    //         context,
+                    //         MaterialPageRoute(
+                    //             builder: (context) => HomeScreen()));
+                    //   },
+                    //   child: CircleAvatar(
+                    //     backgroundColor: Colors.white,
+                    //     radius: 25,
+                    //     foregroundImage: AssetImage('assets/images/GPGC2.gif'),
+                    //   ),
+                    // ),
                   ),
                   Expanded(
                     flex: 10,
@@ -154,10 +164,10 @@ class _DmLeftScreenState extends State<DmLeftScreen> {
                                     padding: EdgeInsets.only(
                                         top: 16, left: 16, right: 16),
                                     child: Text(
-                                      'MEMBERS - 3',
+                                      'Friends',
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 12,
+                                          fontSize: 18,
                                           color: Colors.grey),
                                     ),
                                   ),

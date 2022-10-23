@@ -14,8 +14,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('back'),
-          backgroundColor: const Color(0xff7289DA),
+          title: const Text('Back'),
+          backgroundColor: const Color(0xff2b2b2b),
         ),
         body: Column(
           children: [
@@ -37,11 +37,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   labelText: 'Email Address',
                   focusColor: Colors.black,
                   hintText: 'Enter Email',
-                  fillColor: const Color(0xffF8F9FA),
                   filled: true,
                   prefixIcon: const Icon(
                     Icons.mail,
-                    color: Color(0xff7289DA),
+                    color: Color(0xff5865F2),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: const BorderSide(
@@ -70,7 +69,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   filled: true,
                   prefixIcon: const Icon(
                     Icons.phone,
-                    color: Color(0xff7289DA),
+                    color: Color(0xff5865F2),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: const BorderSide(
@@ -92,24 +91,27 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
             TextButton(
                 onPressed: (() {}), child: Text('View our privacy policy')),
-            Container(
-              height: 50,
-              width: 390,
-              decoration: BoxDecoration(
-                color: Color(0xff7289DA),
-                borderRadius: BorderRadius.circular(10),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Container(
+                height: 45,
+                width: 390,
+                decoration: BoxDecoration(
+                  color: Color(0xff5865F2),
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: OutlinedButton(
+                    onPressed: (() {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RegisterScreenII()));
+                    }),
+                    child: Text(
+                      'Next',
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    )),
               ),
-              child: OutlinedButton(
-                  onPressed: (() {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => RegisterScreenII()));
-                  }),
-                  child: Text(
-                    'Next',
-                    style: TextStyle(color: Colors.white, fontSize: 20),
-                  )),
             )
           ],
         ));

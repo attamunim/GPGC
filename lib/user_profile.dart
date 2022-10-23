@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:gpgc/home.dart';
-import 'package:gpgc/main.dart';
-import 'package:provider/provider.dart';
 
+// import 'package:wave/wave.dart';
+// import 'package:wave/config.dart';
 class UserProfile extends StatefulWidget {
   const UserProfile({super.key});
 
@@ -19,10 +17,34 @@ class _UserProfileState extends State<UserProfile> {
       body: Stack(
         children: [
           Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Text('UserProfile'),
+              SizedBox(
+                height: 15,
+              ),
+              SafeArea(
+                  child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: Container(
+                  height: 60,
+                  decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(10),
+                          bottomRight: Radius.circular(10))),
+                  child: Align(
+                    alignment: Alignment.bottomRight,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8.0, vertical: 16),
+                      child: CircleAvatar(
+                        radius: 30,
+                        backgroundColor: Colors.black,
+                        foregroundImage: AssetImage('assets/images/munim.jpg'),
+                      ),
+                    ),
+                  ),
+                ),
+              )),
             ],
           ),
           Align(
@@ -81,9 +103,9 @@ class _UserProfileState extends State<UserProfile> {
                             child: GestureDetector(
                               onTap: (() {}),
                               child: const CircleAvatar(
-                                radius: 16,
+                                radius: 15,
                                 foregroundImage:
-                                    AssetImage('assets/images/GPGC2.gif'),
+                                    AssetImage('assets/images/munim.jpg'),
                               ),
                             ),
                           ),

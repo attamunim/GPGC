@@ -99,14 +99,14 @@ class _DmHome extends State<DmHome> {
                             size: 25,
                           ),
                         ),
-                        // IconButton(
-                        //   onPressed: () {},
-                        //   icon: const Icon(
-                        //     Icons.notifications,
-                        //     color: Colors.black45,
-                        //     size: 25,
-                        //   ),
-                        // ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.notifications,
+                            color: Colors.black45,
+                            size: 25,
+                          ),
+                        ),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8),
                           child: GestureDetector(
@@ -117,9 +117,9 @@ class _DmHome extends State<DmHome> {
                                       builder: (context) => UserProfile()));
                             }),
                             child: const CircleAvatar(
-                              radius: 16,
+                              radius: 15,
                               foregroundImage:
-                                  AssetImage('assets/images/GPGC2.gif'),
+                                  AssetImage('assets/images/munim.jpg'),
                             ),
                           ),
                         ),

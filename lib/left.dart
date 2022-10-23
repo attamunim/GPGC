@@ -3,10 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:gpgc/dm_home.dart';
 import 'package:gpgc/home.dart';
 import 'package:gpgc/login_screen.dart';
-import 'package:gpgc/main_screen.dart';
-import 'package:gpgc/welcome.dart';
-import 'package:overlapping_panels/overlapping_panels.dart';
-import 'package:super_bottom_navigation_bar/super_bottom_navigation_bar.dart';
 
 class LeftScreen extends StatefulWidget {
   const LeftScreen({super.key});
@@ -33,27 +29,25 @@ class _LeftScreenState extends State<LeftScreen> {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 60,
+                    height: 70,
                   ),
                   Container(
-                    height: 70,
                     decoration: BoxDecoration(
-                      color: Colors.grey[200],
                       border: Border(
                         bottom: BorderSide(color: Colors.black12),
                       ),
                     ),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => DmHome()));
-                      },
-                      child: CircleAvatar(
-                        backgroundColor: Colors.white,
-                        radius: 25,
-                        foregroundImage: AssetImage('assets/images/GPGC2.gif'),
-                      ),
-                    ),
+                    child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DmHome()));
+                        },
+                        icon: Icon(
+                          Icons.messenger_rounded,
+                          color: Colors.green,
+                        )),
                   ),
                   Expanded(
                     flex: 10,

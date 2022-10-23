@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 5), (() {
+    Timer(Duration(seconds: 3), (() {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => WelcomeScreen()));
     }));
@@ -26,20 +26,24 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Image(
-            image: AssetImage('assets/images/GPGC2.gif'),
-          ),
-          Text(
-            'GPGC',
-            style: TextStyle(
-              fontSize: 40,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image(
+              image: AssetImage('assets/images/GPGC2.gif'),
             ),
-          )
-        ],
+            SizedBox(
+              height: 50,
+            ),
+            Text(
+              'GPGC Hangouts',
+              style: TextStyle(fontSize: 40, color: Color(0xff424242)),
+            )
+          ],
+        ),
       ),
     );
   }

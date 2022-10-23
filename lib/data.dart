@@ -18,7 +18,7 @@ final avatars = [
 final users = [
   {
     "name": "Atta ul Munim",
-    "avatar": "assets/images/GPGC1.gif",
+    "avatar": "assets/images/munim.jpg",
   },
   {
     "name": "Ahmad Ali",
@@ -26,7 +26,7 @@ final users = [
   },
   {
     "name": "Shoaib",
-    "avatar": "assets/images/GPGC1.gif",
+    "avatar": "assets/images/GPGC2.gif",
   },
 ];
 
@@ -87,17 +87,10 @@ final List<Map<String, dynamic>> pm = [
   },
   {"user": users[1], "message": "🎉🎊", "time": "01/01/2022"},
   {
-    "user": users[2],
-    "message":
-        "Yo, I've got some new dope cases coming in in a few days. Can't wait to show you what's in store...",
-    "time": "03/01/2022"
-  },
-  {
     "user": users[0],
     "message": "casestody baakope! shooww them",
     "time": "03/01/2022"
   },
-  {"user": users[2], "message": "Hehe! to the wiase", "time": "04/01/2022"},
   {
     "user": users[1],
     "message": "Has the expresso machine arrived?",
