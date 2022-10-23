@@ -27,7 +27,7 @@ class _UserProfileState extends State<UserProfile> {
                 child: Container(
                   height: 60,
                   decoration: BoxDecoration(
-                      color: Colors.red,
+                      color: Colors.blue,
                       borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(10),
                           bottomRight: Radius.circular(10))),
